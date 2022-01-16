@@ -1,0 +1,89 @@
+Coding:
+package labtest2;
+
+import java.util.Scanner;
+
+public class Q1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanMe = new Scanner (System.in);
+		
+		int age;
+		double salary;
+		double salary1;
+		double salary2;
+		double salary3;
+		int service1;
+		int service2;
+		int service3;
+		
+		
+		System.out.println("Please enter your salary:");
+		salary = scanMe.nextInt();
+		
+		System.out.println("Please enter your year of service:");
+		age = scanMe.nextInt();
+		
+		if(salary > 6) {
+		 double bonuse = (0.05/100)*(salary);
+		System.out.println("Net salary is:" + bonuse);
+	}
+	else {
+		System.out.println("you dont get net salary");
+		
+}
+		System.out.println("Please enter your salary for 1,2 and3:");
+		salary1 = scanMe.nextInt();
+		salary2 = scanMe.nextInt();
+		salary3 = scanMe.nextInt();
+		
+		System.out.println("Please enter your service for 1,2 and3:");
+		service1 = scanMe.nextInt();
+		service2 = scanMe.nextInt();
+		service3 = scanMe.nextInt();
+		
+		if((salary1 < salary2) && (salary3 < salary2) ) {
+			System.out.println("The highest is salary2:RM"+ salary2);
+			
+		}
+		else if((salary2 < salary1) && (salary3<salary1)) {
+			System.out.println("The highest is salary1:RM" + salary1);
+		}
+		else if ((salary1<salary3) && (salary2<salary1)) {
+			System.out.println("The highest is salary3:RM" + salary3);
+		}
+
+		if((service2 < service1) && (service3 < service1)) {
+			System.out.println("The longest is employie1:" + service1);
+		}
+		else if ((service3<service2) && (service1<service2)) {
+			System.out.println("The longest is employie2:" + service2);
+		}
+		else if((service1<service3) && (service2<service3)) {
+			System.out.println("The longest is employie3:" + service3);
+		}
+
+				
+		
+
+	}
+
+}
+
+Output:
+Please enter your salary:
+1223
+Please enter your year of service:
+7
+Net salary is:0.6115
+Please enter your salary for 1,2 and3:
+123
+567
+234
+Please enter your service for 1,2 and3:
+5
+8
+9
+The highest is salary2:RM567.0
+The longest is employie3:9
